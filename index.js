@@ -30,6 +30,18 @@ function reducer (state, action) {
   }
 }
 
+function getState (state) {
+  return state.intl
+}
+
+function getLocale (state) {
+  return getState(state).locale
+}
+
+function getMessages (state) {
+  return getState(state).messages
+}
+
 var ReduxIntl = React.createClass({
   propTypes: {
     locale: React.PropTypes.string,
@@ -49,8 +61,8 @@ var ReduxIntl = React.createClass({
 
 function mapStateToProps (state) {
   return {
-    locale: state.intl.locale,
-    messages: state.intl.messages
+    locale: getLocale(state),
+    messages: getMessages(state)
   }
 }
 
@@ -58,3 +70,5 @@ module.exports = connect(mapStateToProps)(ReduxIntl)
 module.exports.SET_LOCALE = SET_LOCALE
 module.exports.setLocale = setLocale
 module.exports.reducer = reducer
+module.exports.getLocale = getLocale
+module.exports.getMessages = getMessages

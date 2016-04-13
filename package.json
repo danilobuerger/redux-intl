@@ -1,0 +1,40 @@
+{
+  "name": "redux-intl",
+  "version": "1.0.0",
+  "description": "Simple bindings between react-intl and redux",
+  "keywords": [
+    "intl",
+    "react-intl",
+    "redux",
+    "locale"
+  ],
+  "author": "Danilo Bürger <info@danilobuerger.de> (http://danilobuerger.de)",
+  "license": "MIT",
+  "homepage": "https://github.com/danilobuerger/redux-intl#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danilobuerger/redux-intl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danilobuerger/redux-intl/issues"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "object-assign": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.7.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.1",
+    "react-intl": "^2.0.1",
+    "react-redux": "^4.4.4",
+    "redux": "^3.4.0"
+  },
+  "scripts": {
+    "lint": "eslint *.js"
+  }
+}
